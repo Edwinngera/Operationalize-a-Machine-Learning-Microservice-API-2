@@ -16,6 +16,7 @@ kubectl run $dockerpath --image=andresaaap/udacitypinzonimage:v1pro3 --port=80
 kubectl get pod
 # Step 4:
 # Forward the container port to a host
-kubectl expose deployment $dockerpath --type=8000
+kubectl expose deployment udacitypinzonimage --type=LoadBalancer --port=80
+minikube service udacitypinzonimage
 
 
